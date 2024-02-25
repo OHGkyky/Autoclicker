@@ -1,0 +1,18 @@
+import pyautogui
+import time
+
+def auto_click(interval, duration):
+    print(f"Auto-clicking every {interval} seconds for {duration} seconds...")
+    end_time = time.time() + duration
+    while time.time() < end_time:
+        pyautogui.click()
+        time.sleep(interval)
+
+# Set the interval between clicks in seconds
+click_interval = 0.5
+
+# Set the duration of auto-clicking in seconds
+click_duration = 10
+
+# Call the auto_click function with the specified interval and duration
+auto_click(click_interval, click_duration)
